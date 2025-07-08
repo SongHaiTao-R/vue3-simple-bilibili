@@ -1,6 +1,6 @@
-# vue2-bilibili
+# vue3-bilibili
 
-This template should help get you started developing with Vue 3 in Vite.
+Practice on how to build a Vue3 project
 
 ## Recommended IDE Setup
 
@@ -31,3 +31,4 @@ npm run dev
 ```sh
 npm run build
 ```
+
