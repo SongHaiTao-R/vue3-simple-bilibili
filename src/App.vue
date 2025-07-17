@@ -1,51 +1,33 @@
 <template>
-  <div>
-    <span @click="add">Hello World</span>
-    <span> {{ count }}</span>
+  <div class="contain">
+    <span @click="skipHome">{{ homeView }} | </span>
+    <span @click="skipAbout">homeAbout |</span>
+    <RouterView/>
   </div>
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 
-  const count = ref(0)
+const router = useRouter()
+const homeView = ref('homeView')
 
-  function add() {
-    count.value++
-  }
+function skipAbout() {
+  console.log(router)
+  router.push({ path: '/about' })
+}
 
+function skipHome() {
+  router.push({ path: '/' })
+}
 </script>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
+<style lang="less">
+.contain {
   span {
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 20px;
   }
+
 }
 </style>
