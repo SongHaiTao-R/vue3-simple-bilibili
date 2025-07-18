@@ -14,7 +14,6 @@ const router = useRouter()
 const homeView = ref('homeView')
 
 function skipAbout() {
-  console.log(router)
   router.push({ path: '/about' })
 }
 
@@ -26,7 +25,7 @@ function skipHome() {
 <style lang="less">
 .contain {
   span {
-    font-size: 20px;
+    // font-size: 20px;
   }
 
 }
