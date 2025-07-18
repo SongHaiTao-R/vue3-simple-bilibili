@@ -1,6 +1,7 @@
 <template>
   <section>
     <div>{{ name }}</div>
+    <a-button>世界</a-button>
   </section>
 </template>
 

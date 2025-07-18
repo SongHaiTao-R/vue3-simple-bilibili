@@ -1,6 +1,7 @@
 <template>
   <section>
     <div>{{ name }}</div>
+    <a-button>你好</a-button>
   </section>
 </template>
 
